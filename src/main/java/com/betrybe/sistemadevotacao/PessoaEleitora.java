@@ -1,5 +1,8 @@
 package com.betrybe.sistemadevotacao;
 
-public class PessoaEleitora{
+  /**
+   * Classe PessoaEleitora
+   */
+  public class PessoaEleitora {
 
-}
+  }
