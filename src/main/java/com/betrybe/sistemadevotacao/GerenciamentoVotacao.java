@@ -7,9 +7,18 @@ import java.util.ArrayList;
  */
 public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
 
-  private ArrayList<PessoaCandidata> pessoasCandidatas = new ArrayList<PessoaCandidata>();
-  private ArrayList<PessoaEleitora> pessoasEleitoras = new ArrayList<PessoaEleitora>();
-  private ArrayList<String> cpfsComputados = new ArrayList<String>();
+  private ArrayList<PessoaCandidata> pessoasCandidatas;
+  private ArrayList<PessoaEleitora> pessoasEleitoras;
+  private ArrayList<String> cpfsComputados;
+
+  /**
+   * Instantiates a new Gerenciamento votacao.
+   */
+  public GerenciamentoVotacao() {
+    this.pessoasCandidatas = pessoasCandidatas;
+    this.pessoasEleitoras = pessoasEleitoras;
+    this.cpfsComputados = cpfsComputados;
+  }
 
   @Override
   public void cadastrarPessoaCandidata(String nome, int numero) {
