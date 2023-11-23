@@ -13,7 +13,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
 
   @Override
   public void cadastrarPessoaCandidata(String nome, int numero) {
-    for (PessoaCandidata pessoaCandidata: pessoasCandidatas) {
+    for (PessoaCandidata pessoaCandidata : pessoasCandidatas) {
       if (numero == pessoaCandidata.getNumero()) {
         System.out.println("Número da pessoa candidata já utilizado!");
       }
@@ -24,7 +24,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
 
   @Override
   public void cadastrarPessoaEleitora(String nome, String cpf) {
-    for (PessoaEleitora pessoaEleitora: pessoasEleitoras) {
+    for (PessoaEleitora pessoaEleitora : pessoasEleitoras) {
       if (cpf.equals(pessoaEleitora.getCpf())) {
         System.out.println("Pessoa eleitora já cadastrada!");
       }
