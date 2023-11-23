@@ -15,26 +15,10 @@ public class Principal {
   public static void main(String[] args) {
     GerenciamentoVotacao gerenciamentoVotacao = new GerenciamentoVotacao();
 
-  Scanner scanner = new Scanner(System.in);
-  short opcao;
+    final Scanner scanner = new Scanner(System.in);
+    short opcao;
 
-    System.out.println("Cadastrar pessoa candidata?");
-    System.out.println("1 - Sim");
-    System.out.println("2 - Não");
-    System.out.println("Entre com o número correspondente à opção desejada:");
-
-    opcao = Short.parseShort(scanner.next());
-
-    if (opcao == 1) {
-      System.out.println("Entre com o nome da pessoa candidata:");
-      String nome = scanner.next();
-
-      System.out.println("Entre com o número da pessoa candidata:");
-      int numero = Integer.parseInt(scanner.next());
-
-      gerenciamentoVotacao.cadastrarPessoaCandidata(nome, numero);
-    }
-    while (opcao == 1) {
+    do {
       System.out.println("Cadastrar pessoa candidata?");
       System.out.println("1 - Sim");
       System.out.println("2 - Não");
@@ -51,7 +35,7 @@ public class Principal {
 
         gerenciamentoVotacao.cadastrarPessoaCandidata(nome, numero);
       }
-    }
+    } while (opcao == 1);
 
     do {
       System.out.println("Cadastrar pessoa eleitora?");
