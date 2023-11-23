@@ -25,10 +25,11 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
     for (PessoaCandidata pessoaCandidata : pessoasCandidatas) {
       if (numero == pessoaCandidata.getNumero()) {
         System.out.println("Número da pessoa candidata já utilizado!");
+        return;
       }
-      PessoaCandidata novaPessoaCandidata = new PessoaCandidata(nome, numero);
-      pessoasCandidatas.add(novaPessoaCandidata);
     }
+    PessoaCandidata novaPessoaCandidata = new PessoaCandidata(nome, numero);
+    pessoasCandidatas.add(novaPessoaCandidata);
   }
 
   @Override
@@ -36,10 +37,11 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
     for (PessoaEleitora pessoaEleitora : pessoasEleitoras) {
       if (cpf.equals(pessoaEleitora.getCpf())) {
         System.out.println("Pessoa eleitora já cadastrada!");
+        return;
       }
-      PessoaEleitora novaPessoaEleitora = new PessoaEleitora(nome, cpf);
-      pessoasEleitoras.add(novaPessoaEleitora);
     }
+    PessoaEleitora novaPessoaEleitora = new PessoaEleitora(nome, cpf);
+    pessoasEleitoras.add(novaPessoaEleitora);
   }
 
   @Override
