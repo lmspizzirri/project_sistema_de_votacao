@@ -44,10 +44,10 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
 
   @Override
   public void votar(String cpfPessoaEleitora, int numeroPessoaCandidata) {
-    if(cpfsComputados.contains(cpfPessoaEleitora)) {
+    if (cpfsComputados.contains(cpfPessoaEleitora)) {
       System.out.println("Pessoa eleitora já votou!");
     }
-    for (PessoaCandidata pessoaCandidata: pessoasCandidatas) {
+    for (PessoaCandidata pessoaCandidata : pessoasCandidatas) {
       if (numeroPessoaCandidata == pessoaCandidata.getNumero()) {
         pessoaCandidata.receberVoto();
       }
@@ -61,7 +61,7 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
       System.out.println("É preciso ter pelo menos um voto para mostrar o resultado");
     }
     int porcentagem;
-    for (PessoaCandidata pessoaCandidata: pessoasCandidatas) {
+    for (PessoaCandidata pessoaCandidata : pessoasCandidatas) {
       porcentagem = (pessoaCandidata.getVotos() * 100) / cpfsComputados.size();
       System.out.println(
           "Nome: "
